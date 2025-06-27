@@ -1,8 +1,10 @@
+#!/usr/bin/env node
 /**
  * This script is used to transform the classes in the components to be RTL to fix shadcn rtl support.
  */
 import fs from "fs/promises"
 import path from "path"
+import minimist from "minimist"
 
 const COMPONANTS_PATH = "src/components"
 const RTL_TRANSFORMATIONS = {
@@ -132,7 +134,8 @@ async function findFiles(dir: string, pattern: RegExp): Promise<string[]> {
 }
 
 async function main() {
-	const componentsDir = path.join(process.cwd(), COMPONANTS_PATH)
+	const argv = minimist(process.argv.slice(2))
+	const componentsDir = path.resolve(argv.path || COMPONANTS_PATH)
 	const files = await findFiles(componentsDir, /\.(tsx)$/)
 
 	console.log("🚀 Starting RTL transformation...")
@@ -152,3 +155,5 @@ async function main() {
 }
 
 main().catch(console.error)
+
+export {}

@@ -1,0 +1,34 @@
+{
+  "name": "shadcn-rtl",
+  "version": "0.0.2",
+  "description": "A simple TypeScript script to convert your **ShadCN** components to **RTL-ready** by transforming Tailwind CSS class names.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/rtl-transform.js",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-farah/shadcn-rtl.git"
+  },
+  "keywords": ["shadcn", "rtl", "Tailwind"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/m-farah/shadcn-rtl/issues"
+  },
+  "homepage": "https://github.com/m-farah/shadcn-rtl#readme",
+  "bin": {
+    "shadcn-rtl": "./dist/rtl-transform.js"
+  },
+  "dependencies": {
+    "@types/node": "^24.0.6",
+    "minimist": "^1.2.8"
+  },
+  "devDependencies": {
+    "@types/minimist": "^1.2.5",
+    "typescript": "^5.8.3"
+  }
+}
