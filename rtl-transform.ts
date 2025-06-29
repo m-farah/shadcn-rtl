@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /**
  * This script is used to transform the classes in the components to be RTL to fix shadcn rtl support.
  */
@@ -65,6 +64,10 @@ const RTL_SPECIFIC_CLASSES = {
 	"rtl:slide-out-to-end": "rtl:slide-out-to-start",
 }
 
+const SKIP_RTL_FILES = [
+	"dialog.tsx",
+]
+
 function transformClasses(content: string): string {
 	let transformedContent = content
 
@@ -98,6 +101,11 @@ function transformClasses(content: string): string {
 }
 
 async function processFile(filePath: string) {
+	const fileName = path.basename(filePath)
+	if (SKIP_RTL_FILES.includes(fileName)) {
+		console.log(`⏭️  Skipping RTL transform for: ${filePath}`)
+		return false
+	}
 	try {
 		const content = await fs.readFile(filePath, "utf-8")
 		const transformedContent = transformClasses(content)
