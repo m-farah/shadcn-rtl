@@ -9,7 +9,7 @@ A CLI tool to convert your **ShadCN** components to **RTL-ready** by transformin
 ### Quick Start (Recommended)
 
 ```bash
-npx shadcn-rtl
+npm i shadcn-rtl -g
 ```
 
 This will process components in the default location: `src/components`
