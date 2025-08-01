@@ -1,0 +1,25 @@
+# Source files
+*.ts
+!*.d.ts
+
+# Configuration files
+tsconfig.json
+tsconfig.*.json
+
+# Development files
+.vscode/
+.idea/
+*.log
+
+# Git files
+.git/
+.gitignore
+
+# Node modules
+node_modules/
+
+# Build artifacts (keep only dist/)
+src/
+
+# Documentation (optional - keep if you want it in the package)
+# README.md 
