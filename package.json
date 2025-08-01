@@ -1,6 +1,6 @@
 {
   "name": "shadcn-rtl",
-  "version": "0.0.5",
+  "version": "0.0.51",
   "description": "A simple TypeScript script to convert your **ShadCN** components to **RTL-ready** by transforming Tailwind CSS class names.",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   "keywords": [
     "shadcn",
     "rtl",
-    "Tailwind"
+    "tailwind"
   ],
   "author": "",
   "license": "ISC",
@@ -28,11 +28,11 @@
     "shadcn-rtl": "./dist/rtl-transform.js"
   },
   "dependencies": {
-    "@types/node": "^24.0.6",
     "minimist": "^1.2.8"
   },
   "devDependencies": {
     "@types/minimist": "^1.2.5",
-    "typescript": "^5.8.3"
+    "@types/node": "^24.1.0",
+    "typescript": "^5.9.2"
   }
 }
